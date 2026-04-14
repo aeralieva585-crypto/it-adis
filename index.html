@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>IT Адис</title>
+
+<style>
+
+body{
+margin:0;
+font-family:sans-serif;
+background:rgb(255, 255, 255);
+color:rgb(0, 0, 0);
+}
+
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+
+.hero img{
+width:300px;
+border-radius:30px;
+box-shadow:0 0 30px #00ff22;
+}
+
+/* секции */
+section{
+padding:100px 20px;
+text-align:center;
+}
+
+/* ФАКТЫ */
+.fact-box{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.fact{
+width:250px;
+background:#ffffff;
+padding:25px;
+border-radius:15px;
+box-shadow:0 0 20px #00ff22;
+}
+
+/* СТУДЕНТЫ */
+.student-box{
+display:flex;
+gap:30px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.student-box img{
+width:220px;
+height:280px;
+border-radius:20px;
+box-shadow:0 0 20px #00ff22;
+object-fit:cover;
+cursor:pointer;
+}
+
+/* WHY */
+.why-box{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.why-item{
+background:#ffffff;
+padding:20px;
+border-radius:15px;
+width:180px;
+box-shadow:0 0 20px #00ff22;
+}
+
+/* ОТЗЫВЫ */
+.slider{
+position:relative;
+max-width:400px;
+margin:auto;
+overflow:hidden;
+}
+
+.slides{
+display:flex;
+transition:0.5s;
+}
+
+.slide{
+min-width:100%;
+display:flex;
+justify-content:center;
+}
+
+.slide iframe{
+width:300px;
+height:500px;
+border-radius:20px;
+box-shadow:0 0 20px #00ff22;
+}
+
+.prev, .next{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:#00ff22;
+color:black;
+border:none;
+padding:10px 15px;
+cursor:pointer;
+border-radius:10px;
+}
+
+.prev{left:0;}
+.next{right:0;}
+
+/* ЯЗЫКИ */
+.lang-box{
+display:flex;
+gap:30px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.lang{
+background:#ffffff;
+padding:25px;
+width:250px;
+border-radius:15px;
+box-shadow:0 0 20px #00ff22;
+}
+
+/* КНОПКА */
+.btn{
+background:#00ff22;
+color:rgb(0, 0, 0);
+padding:15px 30px;
+border-radius:10px;
+text-decoration:none;
+display:inline-block;
+margin-top:20px;
+}
+
+/* ФОТО ОФИСА */
+.office{
+width:300px;
+border-radius:20px;
+box-shadow:0 0 20px #00ff22;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+<h1>IT ADIS</h1>
+<img src="suka.png.jpg">
+</section>
+
+<!-- ФАКТЫ -->
+<section>
+<h2>ФАКТЫ</h2>
+
+<div class="fact-box">
+<div class="fact">2021-жылдан бери Bootcamp форматында окутуп 3 айда айти адис кылып чыгарып келебиз</div>
+<div class="fact">1000+ студентти окутуп чыгарганбыз жана 1000+ окуучу жумуш менен камсыздалган</div>
+<div class="fact">Стажировка эн чон компанияларда болот</div>
+</div>
+
+</section>
+
+<!-- СТУДЕНТЫ -->
+<section>
+<h2>Пикирлер</h2>
+
+<div class="student-box">
+<img src="student.png.jpg" onclick="openModal(this)">
+<img src="student2.png.jpg" onclick="openModal(this)">
+<img src="student3.png.jpg" onclick="openModal(this)">
+</div>
+
+</section>
+
+<!-- ЭМНЕ ҮЧҮН БИЗ -->
+<section>
+<h2>Эмне үчүн биз?</h2>
+
+<div class="why-box">
+<div class="why-item">⚡ сабактар жумасына 5 жолу 2сааттан болот</div>
+<div class="why-item">💼 Жумушка орношуу же заказ табууга жардам </div>
+<div class="why-item">📊 сертификат 3 тилде берилет Европа олколорундо да иштесе болот</div>
+<div class="why-item">🤝 офиске бош убактысында келип мугалимдерден кошумча тапшырма алып отурса болот</div>
+<div class="why-item">🌍 бизде онлайн да оффлайн да формат бар </div>
+</div>
+
+</section>
+
+<!-- ОТЗЫВЫ -->
+<section>
+<h2>Биздин студенттер</h2>
+
+<div class="slider">
+
+<button class="prev" onclick="moveSlide(-1)">❮</button>
+
+<div class="slides">
+
+<div class="slide">
+<iframe src="https://www.instagram.com/reel/DW6QcTrjGqU/embed"></iframe>
+</div>
+
+<div class="slide">
+<iframe src="https://www.instagram.com/reel/DIBy20Ws5pY/embed"></iframe>
+</div>
+
+<div class="slide">
+<iframe src="https://www.instagram.com/reel/DMuy7S8MsdW/embed"></iframe>
+</div>
+
+<div class="slide">
+<iframe src="https://www.instagram.com/reel/DJeWI7zsN2o/embed"></iframe>
+</div>
+
+</div>
+
+<button class="next" onclick="moveSlide(1)">❯</button>
+
+</div>
+
+</section>
+
+<!-- ЯЗЫКИ -->
+<section>
+<h2>Биз эмнени үйрөтөбүз</h2>
+
+<div class="lang-box">
+
+<div class="lang">
+<h3>JavaScript</h3>
+<p>🟨 JavaScript (JS) — сайттар үчүн тил
+Сайтты адамга окшоштурсак:
+HTML — скелет
+CSS — кийим
+JavaScript — мээ жана аракет
+👉 JavaScript менен сен:
+кнопкаларды иштетесиң (бассаң — бир нерсе болот)
+анимация жасайсың
+сайтты “жандуу” кыласың
+фронтенд жазасың (колдонуучу көргөн бөлүк)
+💡 Мисал:
+Кнопканы бастың → билдирүү чыкты → меню ачылды
+📍 Кайда колдонулат:
+сайттарда (дээрлик баарында)
+веб-тиркемелерде (мисалы Instagram же TikTok)
+серверде да (Node.js)</p>
+</div>
+
+<div class="lang">
+<h3>Python</h3>
+<p>Python — универсалдуу тил
+Python — бул универсалдуу “солдат” 💪
+👉 Python менен сен:
+ботторду түзөсүң 🤖
+маалымат анализ кыласың 📊
+нейрон тармактарын жасайсың (AI) 🧠
+программалар жана сайттар жазасың
+💡 Мисал:
+Код жаздың → бот кардарларга өзү жооп берет
+же → программа акча, сатуу эсептейт
+📍 Кайда колдонулат:
+жасалма интеллект (AI)
+автоматташтыруу (ишти жеңилдетүү)
+backend (сайттын логикасы)
+программалар жана тиркемелер</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- АДРЕС -->
+<section>
+<h2>Биздин борбор</h2>
+<div class="student-box">
+<img src="fffff.png.jpg" onclick="openModal(this)">
+</div>
+
+<p>📍 Биздин дарек картасында:</p>
+
+<a href="https://2gis.kg/geolocation/yxif7zqfi4zotgsvax7jk0l9" target="_blank" class="btn">
+Картадан көрүү (2GIS)
+</a>
+
+<br><br>
+
+<img src="office.jpg" class="office">
+
+<br><br>
+
+<a href="https://wa.me/996504494305" class="btn">
+WhatsApp жазуу
+</a>
+
+
+</section>
+
+<!-- МОДАЛКА -->
+<div id="modal" style="
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(108, 54, 54, 0.9);
+justify-content:center;
+align-items:center;
+z-index:9999;
+" onclick="this.style.display='none'">
+
+<img id="modalImg" style="
+max-width:90%;
+max-height:90%;
+border-radius:20px;
+box-shadow:0 0 40px #00ff22;
+">
+
+</div>
+
+<script>
+
+/* СЛАЙДЕР */
+let slideIndex = 0
+
+function moveSlide(step){
+const slides = document.querySelector(".slides")
+const total = document.querySelectorAll(".slide").length
+
+slideIndex += step
+
+if(slideIndex < 0) slideIndex = total - 1
+if(slideIndex >= total) slideIndex = 0
+
+slides.style.transform = "translateX(-" + slideIndex * 100 + "%)"
+}
+
+/* МОДАЛКА */
+function openModal(img){
+document.getElementById("modal").style.display="flex"
+document.getElementById("modalImg").src=img.src
+}
+
+</script>
+
+</body>
+</html>
